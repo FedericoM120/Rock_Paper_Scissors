@@ -11,23 +11,25 @@
 
 <script>
 
-//console.log 'computerPlay'
-function ComputerPlay(num) {
-    //returns rock, paper, or scissors
-    for (let i = 1; i =< 3; i++) {
-        if (i == 1) {
-            console.log("rock");
-        } else if (i == 2) {
-            console.log("paper");
-        } else (i == 3) {
-            console.log("rock");
-        }
+//computer either returns rock, paper, or scissors
+
+
+function computerPlay(max) {
+    let num = Math.floor(Math.random() * max);
+    if (num === 0) {
+        return ("rock");
+    } else if (num === 1) {
+        return ("paper");
+    } else {
+        return ("scissors");
     }
 }
 
+  
 
 
-    
+
+
 </script>
 
 
