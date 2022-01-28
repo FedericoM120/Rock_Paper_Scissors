@@ -14,8 +14,8 @@
 //computer either returns rock, paper, or scissors
 
 
-function computerPlay(max) {
-    let num = Math.floor(Math.random() * max);
+function computerPlay() {
+    let num = Math.floor(Math.random() * 3);
     if (num === 0) {
         return ("rock");
     } else if (num === 1) {
@@ -30,10 +30,19 @@ const playerSelection = "rock";
 //computer selection
 const computerSelection = computerPlay();
 
-//functino that plays a round with the player selection against the computer
+//function that plays a round with the player selection against the computer
 
 function playRound(playerSelection, computerSelection) {
-    
+    //if player = rock and comp. = paper return comp. wins
+    //else if player = paper and comp = paper return tie
+    //else if player = scissors and comp = paper return player wins
+    // else if player = rock and comp. = scissors return player wins
+    // else if player = paper and comp. = scissors return comp. wins
+    // else if player = scissors and comp. = scissors return tie
+    //else if player = rock and comp. = rock return tie
+    //else if player = paper and comp. = rock return player wins
+    //else if player = scissors and comp. = rock return computer wins
+    //else something went wrong!
 }
 
 
