@@ -34,15 +34,36 @@ const computerSelection = computerPlay();
 
 function playRound(playerSelection, computerSelection) {
     //if player = rock and comp. = paper return comp. wins
-    //else if player = paper and comp = paper return tie
-    //else if player = scissors and comp = paper return player wins
-    // else if player = rock and comp. = scissors return player wins
-    // else if player = paper and comp. = scissors return comp. wins
-    // else if player = scissors and comp. = scissors return tie
-    //else if player = rock and comp. = rock return tie
-    //else if player = paper and comp. = rock return player wins
-    //else if player = scissors and comp. = rock return computer wins
-    //else something went wrong!
+    if (playerSelection === "rock" && computerSelection === "paper") {
+        console.log("computer wins");
+    } //else if player = paper and comp = paper return tie
+     else if (playerSelection === "paper" && computerSelection === "paper") {
+         console.log("tie");
+     } //else if player = scissors and comp = paper return player wins
+      else if (playerSelection === "scissors" && computerSelection === "paper") {
+          console.log("player wins");
+      } // else if player = rock and comp. = scissors return player wins
+       else if (playerSelection === "rock" && computerSelection === "scissors") {
+           console.log("player wins");
+       }// else if player = paper and comp. = scissors return comp. wins
+        else if (playerSelection === "paper" && computerSelection === "scissors") {
+            console.log("computer wins");
+        }// else if player = scissors and comp. = scissors return tie
+        else if (playerSelection === "scissors" && computerSelection === "scissors") {
+            console.log("tie")
+        } //else if player = rock and comp. = rock return tie
+         else if (playerSelection === "rock" && computerSelection === "rock") {
+             console.log("tie");
+         }//else if player = paper and comp. = rock return player wins
+          else if (playerSelection === "paper" && computerSelection === "rock") {
+              console.log("player wins")
+          }//else if player = scissors and comp. = rock return computer wins
+           else if (playerSelection === "scissors" && computerSelection === "rock") {
+               console.log("computer wins")
+           } //else something went wrong!
+            else {
+                console.log("something went wrong!")
+            }
 }
 
 
