@@ -56,23 +56,89 @@ function playRound(playerSelection, computerSelection) {
 //function that keeps score of playRound function and reports winner or loser at the end of 5 rounds
 
 function game() {
-        var playerSelection = prompt("");
-        var computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        var playerSelection = prompt("");
-        var computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        var playerSelection = prompt("");
-        var computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        var playerSelection = prompt("");
-        var computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-        var playerSelection = prompt("");
-        var computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection));
-}
+    
+    function points() {
+    let playerPoints = 0;
+    let computerPoints = 0;
 
+    if (playerSelection === "rock" && computerSelection === "paper") {
+        playerPoints++;
+}   else if (playerSelection === "paper" && computerSelection === "paper") {
+        playerPoints+= 0;
+        computerPoints+= 0;
+}   else if (playerSelection === "scissors" && computerSelection === "paper") {
+        playerSelection++;
+}   else if (playerSelection === "rock" && computerSelection === "scissors") {
+        playerSelection++;
+}   else if (playerSelection === "paper" && computerSelection === "scissors") {
+        computerSelection++;
+}   else if (playerSelection === "scissors" && computerSelection === "scissors") {
+        playerPoints+= 0;
+        computerPoints+= 0;
+}   else if (playerSelection === "rock" && computerSelection === "rock") {
+        playerPoints+= 0;
+        computerPoints+= 0;
+}   else if (playerSelection === "paper" && computerSelection === "rock") {
+        playerPoints++;
+}   else (playerSelection === "scissors" && computerSelection === "rock") {
+        computerSelection++;
+}
+}
+        var playerSelection = prompt("Choose: Rock, Paper, or Scissors");
+        var computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+        var playerSelection = prompt("Choose: Rock, Paper, or Scissors");
+        var computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+        var playerSelection = prompt("Choose: Rock, Paper, or Scissors");
+        var computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+        var playerSelection = prompt("Choose: Rock, Paper, or Scissors");
+        var computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+        var playerSelection = prompt("Choose: Rock, Paper, or Scissors");
+        var computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
+        if (playerPoints > computerPoints) {
+            return "player wins";
+        } else if (computerPoints > playerPoints) {
+            return "computer wins";
+        } else {
+            return "tie";
+        }
+            
+        }
+        
+
+
+
+
+/*function points() {
+    let playerPoints = 0;
+    let computerPoints = 0;
+
+    if (playerSelection === "rock" && computerSelection === "paper") {
+        playerPoints++;
+}   else if (playerSelection === "paper" && computerSelection === "paper") {
+        playerPoints+= 0;
+        computerPoints+= 0;
+}   else if (playerSelection === "scissors" && computerSelection === "paper") {
+        playerSelection++;
+}   else if (playerSelection === "rock" && computerSelection === "scissors") {
+        playerSelection++;
+}   else if (playerSelection === "paper" && computerSelection === "scissors") {
+        computerSelection++;
+}   else if (playerSelection === "scissors" && computerSelection === "scissors") {
+        playerPoints+= 0;
+        computerPoints+= 0;
+}   else if (playerSelection === "rock" && computerSelection === "rock") {
+        playerPoints+= 0;
+        computerPoints+= 0;
+}   else if (playerSelection === "paper" && computerSelection === "rock") {
+        playerPoints++;
+}   else (playerSelection === "scissors" && computerSelection === "rock") {
+        computerSelection++;
+}*/
 
 </script>
 
