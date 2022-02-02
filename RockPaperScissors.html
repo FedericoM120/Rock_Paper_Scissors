@@ -55,12 +55,13 @@ function playRound(playerSelection, computerSelection) {
 
 //function that keeps score of playRound function and reports winner or loser at the end of 5 rounds
 
-function game() {
-    
-    function points() {
     let playerPoints = 0;
     let computerPoints = 0;
 
+function game() {
+    
+    function points() {
+   
     if (playerSelection === "rock" && computerSelection === "paper") {
         playerPoints++;
 }   else if (playerSelection === "paper" && computerSelection === "paper") {
@@ -80,7 +81,7 @@ function game() {
         computerPoints+= 0;
 }   else if (playerSelection === "paper" && computerSelection === "rock") {
         playerPoints++;
-}   else (playerSelection === "scissors" && computerSelection === "rock") {
+}   else if (playerSelection === "scissors" && computerSelection === "rock") {
         computerSelection++;
 }
 }
@@ -104,7 +105,7 @@ function game() {
         } else if (computerPoints > playerPoints) {
             return "computer wins";
         } else {
-            return "tie";
+            return "You tied with the computer";
         }
             
         }
