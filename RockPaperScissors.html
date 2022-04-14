@@ -34,30 +34,30 @@ function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === "rock" && computerSelection === "paper") {
         computerPoints++;
-        return("computer wins! paper beats rock.");
+        return prompt("computer wins! paper beats rock.");
     } else if (playerSelection === "paper" && computerSelection === "paper") {
-        return("tie");
+        return prompt("tie");
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         playerPoints++;
-        return("player wins! scissors beats paper.");
+        return prompt("player wins! scissors beats paper.");
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerPoints++;
-        return("player wins. rock beats scissors");
+        return prompt("player wins. rock beats scissors");
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         computerPoints++;
-        return("computer wins. scissors beats paper.");
+        return prompt("computer wins. scissors beats paper.");
     } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-        return("tie")
+        return prompt("tie")
     } else if (playerSelection === "rock" && computerSelection === "rock") {
-        return("tie");
+        return prompt("tie");
     } else if (playerSelection === "paper" && computerSelection === "rock") {
         playerPoints++;
-        return("player wins. paper beats rock.")
+        return prompt("player wins. paper beats rock.")
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
         computerPoints++;
-        return("computer wins. rock beats scissors.")
+        return prompt("computer wins. rock beats scissors.")
     } else {
-        return("something went wrong!")
+        return prompt("something went wrong!")
     }
 }
 
@@ -87,13 +87,13 @@ function game() {
         if (playerPoints > computerPoints) {
             playerPoints = 0;
             computerPoints = 0;
-            return `Incredible ${playerName}! You won!`;
+            return prompt(`Incredible ${playerName}! You won!`);
         } else if (computerPoints > playerPoints) {
             playerPoints = 0;
             computerPoints = 0;
-            return `Try again ${playerName}. You lost!`;
+            return prompt(`Try again ${playerName}. You lost!`);
         } else {
-            return "Even steven! You tied!";
+            return prompt("Even steven! You tied!");
         }
         }
         
